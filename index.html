@@ -46,7 +46,6 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #00DF74;
       }
-
       /* n8n Chat Theme Customization */
       :root {
         --chat--color--primary: #00DF74;
@@ -71,7 +70,6 @@
         --chat--toggle--hover--background: #00c063;
         --chat--toggle--active--background: #00a052;
       }
-
       #n8n-chat {
         position: fixed;
         bottom: 20px;
@@ -79,7 +77,7 @@
         z-index: 100;
       }
     </style>
-  <script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react/": "https://esm.sh/react@^19.2.3/",
@@ -92,8 +90,9 @@
   }
 }
 </script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
