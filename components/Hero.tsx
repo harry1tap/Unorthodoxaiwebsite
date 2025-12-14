@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import { Reveal } from './Reveal';
+import { motion } from 'framer-motion';
 
 export const Hero: React.FC = () => {
   return (
