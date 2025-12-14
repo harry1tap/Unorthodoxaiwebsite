@@ -1,59 +1,67 @@
 import React from 'react';
 import { Reveal } from './Reveal';
 
-const StatCard: React.FC<{ value: string; label: string; sub: string }> = ({ value, label, sub }) => (
-  <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-accent/30 hover:bg-white/10 transition-all duration-300 text-center group">
-    <div className="text-4xl lg:text-5xl font-bold text-accent mb-2 group-hover:scale-105 transition-transform duration-300">{value}</div>
-    <div className="text-lg font-semibold text-white mb-2">{label}</div>
-    <div className="text-sm text-gray-400">{sub}</div>
-  </div>
-);
-
 export const Results: React.FC = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surfaceLight">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Reveal width="100%">
-            <h2 className="text-4xl font-bold text-white mb-4">Real Results</h2>
-            <p className="text-accent text-lg font-medium tracking-wide uppercase">Solar Installation Company</p>
+            <div className="text-accent font-mono text-sm mb-4 tracking-wider font-bold">003</div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Testimonials</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              See how we're helping businesses automate their growth.
+            </p>
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
-          <Reveal delay={0.2} width="100%">
-            <StatCard 
-              value="60s" 
-              label="Response Speed" 
-              sub="Under 60 seconds vs 2-8 hours before" 
-            />
+        {/* Testimonials Grid - 3 items */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <Reveal width="100%" delay={0.2}>
+            <div className="bg-white border border-gray-100 p-8 lg:p-10 rounded-2xl relative shadow-lg h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
+              <div className="text-6xl text-accent absolute top-6 left-6 opacity-20 font-serif leading-none">"</div>
+              <blockquote className="relative z-10 pt-6 flex-grow">
+                <p className="text-lg text-gray-700 leading-relaxed italic mb-6">
+                  "Harry helped us engineer a workflow processing system from the ground up. One in a million resource, if you need someone who can not only build it but help you think through it properly, he's your guy"
+                </p>
+              </blockquote>
+              <div className="pt-6 border-t border-gray-100">
+                <div className="font-bold text-gray-900">Client</div>
+                <div className="text-sm text-gray-500">Workflow Automation</div>
+              </div>
+            </div>
           </Reveal>
-          <Reveal delay={0.4} width="100%">
-            <StatCard 
-              value="+42%" 
-              label="Booking Conversion" 
-              sub="More appointments from same lead volume" 
-            />
+
+          <Reveal width="100%" delay={0.3}>
+            <div className="bg-white border border-gray-100 p-8 lg:p-10 rounded-2xl relative shadow-lg h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
+              <div className="text-6xl text-accent absolute top-6 left-6 opacity-20 font-serif leading-none">"</div>
+              <blockquote className="relative z-10 pt-6 flex-grow">
+                <p className="text-lg text-gray-700 leading-relaxed italic mb-6">
+                  "Harry was great to work with - incredibly knowledgeable and flexible in his approach. Would recommend him to anyone looking for assistance with any AI-related project"
+                </p>
+              </blockquote>
+              <div className="pt-6 border-t border-gray-100">
+                <div className="font-bold text-gray-900">Client</div>
+                <div className="text-sm text-gray-500">AI Consulting</div>
+              </div>
+            </div>
           </Reveal>
-          <Reveal delay={0.6} width="100%">
-            <StatCard 
-              value="£0" 
-              label="Hiring Costs" 
-              sub="Didn't need 2 additional sales people" 
-            />
+
+          <Reveal width="100%" delay={0.4}>
+            <div className="bg-white border border-gray-100 p-8 lg:p-10 rounded-2xl relative shadow-lg h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
+              <div className="text-6xl text-accent absolute top-6 left-6 opacity-20 font-serif leading-none">"</div>
+              <blockquote className="relative z-10 pt-6 flex-grow">
+                <p className="text-lg text-gray-700 leading-relaxed italic mb-6">
+                  "Harry's work is probably going to save my company over 100 hours this year. He listened to my suggestions, fixed what I messed up, and never gave up when I was ready to throw in the towel. Great experience - I'm definitely hiring him again"
+                </p>
+              </blockquote>
+              <div className="pt-6 border-t border-gray-100">
+                <div className="font-bold text-gray-900">Business Owner</div>
+                <div className="text-sm text-gray-500">Operations Automation</div>
+              </div>
+            </div>
           </Reveal>
         </div>
-
-        <Reveal width="100%" delay={0.8}>
-          <div className="bg-gradient-to-r from-surface to-surfaceLight border border-white/5 p-8 lg:p-12 rounded-2xl relative">
-            <div className="text-6xl text-accent absolute top-4 left-6 opacity-20 font-serif">"</div>
-            <blockquote className="relative z-10 text-center max-w-4xl mx-auto">
-              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed italic">
-                "We're booking significantly more appointments from the same lead volume. It's like we hired a sales person who never sleeps."
-              </p>
-            </blockquote>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

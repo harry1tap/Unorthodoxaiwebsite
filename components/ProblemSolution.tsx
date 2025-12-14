@@ -35,15 +35,15 @@ export const ProblemSolution: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative bg-surface/30 backdrop-blur-sm border-t border-white/5">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 relative bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Reveal width="100%">
              <div className="text-accent font-mono text-sm mb-4 tracking-wider font-bold">002</div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               The <span className="text-red-500">Problem</span> & The <span className="text-accent">Solution</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Why traditional sales processes are failing and how AI fixes the broken loop.
             </p>
           </Reveal>
@@ -54,26 +54,26 @@ export const ProblemSolution: React.FC = () => {
             <Reveal key={index} delay={index * 0.1} width="100%">
               <div className={`h-full border rounded-xl p-8 transition-all duration-300 group hover:-translate-y-1 flex flex-col ${
                 card.type === 'problem' 
-                  ? 'bg-surface border-white/5 hover:border-red-500/30' 
-                  : 'bg-surface border-white/5 hover:border-accent/30'
+                  ? 'bg-gray-50 border-gray-100 hover:border-red-500/30' 
+                  : 'bg-gray-50 border-gray-100 hover:border-accent/30'
               }`}>
                 <div className={`p-3 rounded-lg w-fit mb-6 ${
                   card.type === 'problem' 
-                    ? 'bg-red-500/10 text-red-500' 
-                    : 'bg-accent/10 text-accent'
+                    ? 'bg-red-50 text-red-500' 
+                    : 'bg-green-50 text-accent'
                 }`}>
                   <card.icon size={24} />
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-3">{card.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{card.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
                   {card.description}
                 </p>
 
                 <div className={`text-xs font-bold uppercase tracking-wider py-2 px-3 rounded border w-fit ${
                    card.type === 'problem'
-                   ? 'border-red-500/20 text-red-500 bg-red-500/5'
-                   : 'border-accent/20 text-accent bg-accent/5'
+                   ? 'border-red-100 text-red-500 bg-red-50'
+                   : 'border-green-100 text-accent bg-green-50'
                 }`}>
                   {card.stat}
                 </div>

@@ -18,9 +18,11 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
   
   const variants = {
-    primary: "bg-accent text-background hover:shadow-[0_0_20px_rgba(0,223,116,0.4)] focus:ring-accent",
-    secondary: "bg-transparent border border-white/20 text-white hover:bg-white/10 focus:ring-white",
-    dark: "bg-background text-white border border-transparent hover:bg-surface focus:ring-surface"
+    primary: "bg-accent text-white shadow-lg shadow-accent/20 hover:shadow-accent/40 focus:ring-accent",
+    // Secondary adapted for light mode: dark gray text, light gray border
+    secondary: "bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 focus:ring-gray-200 shadow-sm",
+    // Dark adapted: solid dark background
+    dark: "bg-gray-900 text-white hover:bg-gray-800 focus:ring-gray-900"
   };
 
   const widthClass = fullWidth ? "w-full" : "";
