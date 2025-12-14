@@ -17,7 +17,7 @@ export const Results: React.FC = () => {
 
         {/* Testimonials Grid - 3 items */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          <Reveal width="100%" delay={0.2}>
+          <Reveal width="100%" delay={0.2} overflow="visible" className="h-full" fullHeight>
             <div className="bg-white border border-gray-100 p-8 lg:p-10 rounded-2xl relative shadow-lg h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
               <div className="text-6xl text-accent absolute top-6 left-6 opacity-20 font-serif leading-none">"</div>
               <blockquote className="relative z-10 pt-6 flex-grow">
@@ -32,7 +32,7 @@ export const Results: React.FC = () => {
             </div>
           </Reveal>
 
-          <Reveal width="100%" delay={0.3}>
+          <Reveal width="100%" delay={0.3} overflow="visible" className="h-full" fullHeight>
             <div className="bg-white border border-gray-100 p-8 lg:p-10 rounded-2xl relative shadow-lg h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
               <div className="text-6xl text-accent absolute top-6 left-6 opacity-20 font-serif leading-none">"</div>
               <blockquote className="relative z-10 pt-6 flex-grow">
@@ -47,7 +47,7 @@ export const Results: React.FC = () => {
             </div>
           </Reveal>
 
-          <Reveal width="100%" delay={0.4}>
+          <Reveal width="100%" delay={0.4} overflow="visible" className="h-full" fullHeight>
             <div className="bg-white border border-gray-100 p-8 lg:p-10 rounded-2xl relative shadow-lg h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
               <div className="text-6xl text-accent absolute top-6 left-6 opacity-20 font-serif leading-none">"</div>
               <blockquote className="relative z-10 pt-6 flex-grow">

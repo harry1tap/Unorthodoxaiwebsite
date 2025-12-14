@@ -116,7 +116,7 @@ export const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, index) => (
-            <Reveal key={index} delay={index * 0.15} width="100%">
+            <Reveal key={index} delay={index * 0.15} width="100%" overflow="visible" className="h-full" fullHeight>
               <ServiceCard {...service} />
             </Reveal>
           ))}
